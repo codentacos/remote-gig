@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import './Styles/app.scss';
 import * as serviceWorker from './serviceWorker';
+
+// Seed Data
+import { seedData } from './seed';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App 
+      seedData={seedData}
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );
