@@ -2,47 +2,15 @@ import React, { Component } from 'react';
 import { Form, FormControl, FormGroup, FormLabel, Button } from 'react-bootstrap';
 import axios from 'axios';
 // import the component
-// import Mailchimp from 'react-mailchimp-form'
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
-class TestForm extends Component {
-    state = {
-        email: '',
-        fname: '',
-        lname: '',
-        company: ''
-    }
+// const simpleForm = () => {<MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL} />
 
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-        // console.log(e.target.value);
-    }
-
-    handleSubmit = (e) => {
-        e.preventDefault();
-        // get our form data out of state
-        const { fname, lname, email, company } = this.state;
-
-        axios({
-            method: 'post',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            url: 'https://gmail.us19.list-manage.com/subscribe/post?u=873c1782a49f8d3e5a649e23a&amp;id=51fc529884',
-            data: { fname, lname, email, company },
-            })
-            .then((result) => {
-                console.log(result);
-                
-                console.log('data submitted');
-            })
-            .catch((error) => {
-                console.log('There was an error: ', error);
-            });
-    }
-    
-    render() {
-        return (
-            <form className='subscribe-form' onSubmit={this.handleSubmit}>
+const TestForm = () => {
+    return (
+        <MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL}
+        render={() => {
+            <Form className='subscribe-form'>
                 <h3 className='text-center'>Subscribe for updates and a 25% discount code!</h3>
                 <FormGroup controlId='Email'>
                     <FormLabel>E-mail Address:</FormLabel>
@@ -61,12 +29,14 @@ class TestForm extends Component {
 
                 <FormGroup controlId='Company'>
                     <FormLabel>Company:</FormLabel>
-                    <FormControl type='text'  name='company' value={this.state.company} onChange={this.handleChange} placeholder='Company Name' />
+                    <FormControl type='text' name='company' value={this.state.company} onChange={this.handleChange} placeholder='Company Name' />
                 </FormGroup>
                 <Button type='submit' variant='outline-danger m-auto d-block'>Subscribe</Button>
-            </form>
+            </Form>
+        }}
+                
+             />
         );
-    }
 }
 
 export default TestForm;

@@ -9,6 +9,7 @@ import FullListing from './Components/FullListing';
 import CreateJobPost from './Components/CreateJobPost';
 import TestForm from './Components/TestForm';
 import Footer from './Components/Footer';
+import RimpForm from './Components/RimpForm';
 
 // Seed Data
 import { seedData } from './seed';
@@ -52,7 +53,7 @@ export default class App extends Component {
                   {/* <Button variant='dark m-auto'>Post A Job</Button> */}
                 </Row>
                 <Row>
-                <TestForm />
+                <RimpForm />
                 </Row>
                 </Route> 
                 {/* REMOVE ABOVE  CLOSING TAG*/}
