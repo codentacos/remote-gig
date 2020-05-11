@@ -3,7 +3,7 @@ import { Container, Row, Button } from 'react-bootstrap';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 // Components
-import Header from './Components/Header';
+import MainNav from './Components/MainNav';
 import JobCard from './Components/JobCard';
 // import CreateJobPost from './Components/CreateJobPost';
 import Footer from './Components/Footer';
@@ -49,14 +49,15 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <Container fluid className='px-0'>
-          <Header />
+          <MainNav />
           <Container className='main-content'>
             <Switch>
 
               <Route exact path='/home'>
                 <Row>
-                  <p className='text-center home-intro'>Welcome to Rework. We are an online job board specialized in helping you find your next remote work opportunity.</p>
-                  <Button variant='dark m-auto'>Post A Job</Button>
+                  <img id='programmer-img' src='/programmer.svg' />
+                  <p className='text-center home-intro'>We are an online job board specialized in helping software developers and designers find their next remote work opportunity.</p>
+                  <Button id='post-job-btn' variant='dark m-auto'>Post A Job</Button>
                 </Row>
 
                 <Row>
