@@ -12,7 +12,6 @@
 
     .jobs-heading {
         margin: 10px auto;
-        max-height: 153px;
         padding: 0 15px;
         width: 100%;
         @media (min-width: 768px) {
@@ -55,8 +54,8 @@
 
     #programmer-img {
         margin: 0 auto;
+        max-height: 153px;
         width: 80%;
-
         @media (min-width: 768px) {
             width: 450px;
         }
