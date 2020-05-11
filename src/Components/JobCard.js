@@ -5,9 +5,9 @@ export default class JobCard extends Component {
     renderJobs(job) {
         return (
             <Row key={job.key.toString()} id={job.key} className="job-card-row mb-2 mr-1 ml-1 justify-content-center" >
-                <Card style={{ width: '100%' }}>
-                    <Card.Body>
-                        <Card.Title>{job.title}</Card.Title>
+                <Card className='job-cards'>
+                    <Card.Body className='card-body'>
+                        <Card.Title className='card-title'>{job.title}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">{job.company}</Card.Subtitle>
 
                         {(() => {
@@ -33,8 +33,8 @@ export default class JobCard extends Component {
                             } else {
                                 return (
                                     <Card.Text>
-                                        <span className='d-block'>{job.desc}</span>
-                                        <Button variant='outline-dark mt-1' onClick={this.props.handleState}>See More</Button>
+                                        {/* <span className='d-block'>{job.desc}</span> */}
+                                        <Button variant='outline-dark mt-1' size='sm' onClick={this.props.handleState}>See More</Button>
                                     </Card.Text>)
 
                             }

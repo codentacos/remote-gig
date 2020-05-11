@@ -1,7 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import 'createJobPostForm';
 @import 'fullListing';
-@import 'subscribeForm';
 
 .mainNav {
     background-color: white;
@@ -10,33 +9,63 @@
 .main-content {
     margin: 100px auto 0 auto;
     padding: 0;
+
     .jobs-heading {
+        margin: 10px auto;
         padding: 0 15px;
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 80%;
+            }
     }
+
     .row {
         margin: 0;
+        
     }
+
+    .card-body {
+        padding: 10px 15px;
+    }
+
+    .job-cards {
+        background-color: rgba(230,230,230,.2);
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 80%;
+            }
+        .card-title {
+            font-size: 1.0em;
+        }
+    }
+
     .listgroup-item {
         border: none;
     }
+
     .home-intro {
         font-size: 1.5em;
         margin-top: 10px;
+
         @media (min-width: 768px) {
             font-size: 1.8em;
         }
     }
+
     #programmer-img {
         margin: 0 auto;
         width: 80%;
+
         @media (min-width: 768px) {
             width: 450px;
         }
     }
+
     #post-job-btn {
-        background-color: rgb(50,191,166);
+        background-color: rgb(50, 191, 166);
+
         &:hover {
-            background-color: rgba(50,191,166,0.7);
+            background-color: rgba(50, 191, 166, 0.7);
         }
     }
 }
@@ -45,10 +74,12 @@
     background-color: #000;
     color: #fff;
     height: 60px;
+
     a {
-        color: rgb(50,191,166);
+        color: rgb(50, 191, 166);
+
         &:hover {
-            color: rgba(50,191,166,0.7);
+            color: rgba(50, 191, 166, 0.7);
         }
     }
 }

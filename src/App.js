@@ -60,16 +60,16 @@ export default class App extends Component {
                   <Button id='post-job-btn' variant='dark m-auto'>Post A Job</Button>
                 </Row>
 
-                <Row>
+                <Container>
                   <h2 className='jobs-heading'>Jobs</h2>
-                </Row>
-                <JobCard
-                  jobs={this.state.jobs}
-                  seeMore={this.state.seeMore}
-                  userInput={this.state.userInput}
-                  handleState={this.handleState}
-                />
-
+                
+                  <JobCard
+                    jobs={this.state.jobs}
+                    seeMore={this.state.seeMore}
+                    userInput={this.state.userInput}
+                    handleState={this.handleState}
+                  />
+                </Container>
               </Route>
               {/* <Route path='/create'>
                 <CreateJobPost />
