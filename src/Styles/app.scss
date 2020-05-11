@@ -57,6 +57,7 @@
         max-height: 153px;
         width: 80%;
         @media (min-width: 768px) {
+            max-height: 100%;
             width: 450px;
         }
     }
