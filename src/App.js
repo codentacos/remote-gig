@@ -55,7 +55,7 @@ export default class App extends Component {
 
               <Route exact path='/home'>
                 <Row>
-                  <img id='programmer-img' src='/programmer.svg' />
+                  <img id='programmer-img' src='/programmer.svg' alt='programmer' />
                   <p className='text-center home-intro'>We are an online job board specialized in helping software developers and designers find their next remote work opportunity.</p>
                   <Button id='post-job-btn' variant='dark m-auto'>Post A Job</Button>
                 </Row>

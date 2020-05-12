@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, Nav, NavLink } from 'react-bootstrap';
-import logo from './../assets/images/REWORK.png';
 
 export default class MainNav extends Component {
     render() {

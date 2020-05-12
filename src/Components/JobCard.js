@@ -28,7 +28,6 @@ export default class JobCard extends Component {
                                         </Card.Text>
                                         <Button type='button' variant='outline-dark mr-2' style={{ width: '115px' }}>Apply</Button>
                                         <Button variant='outline-danger' style={{ width: '115px' }} onClick={this.props.handleState}>See Less</Button>
-
                                     </div>)
                             } else {
                                 return (
@@ -36,7 +35,6 @@ export default class JobCard extends Component {
                                         {/* <span className='d-block'>{job.desc}</span> */}
                                         <Button variant='outline-dark mt-1' size='sm' onClick={this.props.handleState}>See More</Button>
                                     </Card.Text>)
-
                             }
                         })()}
                     </Card.Body>
